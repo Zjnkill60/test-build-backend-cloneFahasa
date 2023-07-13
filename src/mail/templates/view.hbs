@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+
+</head>
+
+<body
+    style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';">
+    <table style="min-height: 600px;width : 100%;margin: 0 auto; padding : 10px ; background-color : #ededed ">
+        <tr>
+            <td align="center">
+                <table style="background-color: white; border-radius: 5px;max-width : 700px;padding : 20px">
+                    <tr>
+                        <td colspan="2">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td>
+                                        <span style="text-align: left; font-size: 30px;">BOOKSTORE
+                                        </span>
+
+                                    </td>
+
+
+                                    <td> <span style="text-align:right; font-size: 15px;color : #aaaaaa;">ĐƠN
+                                            HÀNG CỦA
+                                            {{orderName}}
+                                        </span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+
+
+
+
+                    </tr>
+                    <tr>
+                        <td style="margin: 15px 0;width : 100%; border-top: 1px solid rgba(5, 5, 5, 0.06);"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div style="text-align: left;">
+                                <div style="font-size: 20px;margin : 15px 0">Cảm ơn quý khách đã mua hàng tại BookStore.
+                                </div>
+                                <div style="font-size: 14px;color:#666666">Xin chào , BookStore rất vui đã nhận được đơn
+                                    đặt hàng của
+                                    quý khách, Chúng tôi sẽ liên hệ lại ngay để xác nhận đơn hàng
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="margin: 25px 0; border-top: 1px solid rgba(5, 5, 5, 0.06);"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="text-align: left;margin: 25px 0;font-size: 20px;">Thông tin đơn hàng
+                            </div>
+                        </td>
+                    </tr>
+
+                    {{#each orderItem}}
+                    <tr>
+                        <td>
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td style="width: 100px;">
+                                        <img width="80px" height="80px" style="object-fit: cover;" src={{thumbnail}} />
+                                    </td>
+
+                                    <td>
+                                        <span style="font-weight: 500;"> {{name}} - {{quantity}}</span>
+                                    </td>
+
+                                    <td style="text-align: right;">
+                                        <span
+                                            style="font-weight: 500;font-size : 16px;text-align:right">{{price}}đ</span>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="margin : 10px 0; width : 100%; border-top: 1px solid rgba(5, 5, 5, 0.06);">
+                            </div>
+                        </td>
+                    </tr>
+
+
+                    {{/each}}
+                    <tr>
+                        <td colspan="2">
+                            <table style="width: 70% , margin-left:11px">
+                                <tr>
+
+                                    <td>
+                                        <span style="text-align: left;color:#666666;">Tổng giá trị sản phẩm</span>
+                                    </td>
+                                    <td>
+                                        <span style="text-align: right;font-weight:700;">{{orderPrice}}đ</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span style="text-align: left;color:#666666;">Khuyến mãi</span>
+                                    </td>
+                                    <td>
+                                        <span style="text-align: right;font-weight:700;">0đ</span>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span style="text-align: left;color:#666666;">Phí vận chuyển</span>
+                                    </td>
+                                    <td>
+                                        <span style="text-align: right;font-weight:700;">0đ</span>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td style="width : 100%; border-top: 1px solid rgba(5, 5, 5, 0.06);">
+                                    </td>
+                                </tr>
+                                <tr style="margin-top: 10px;">
+                                    <td>
+                                        <span style="text-align: left;color:#666666;">Tổng cộng</span>
+                                    </td>
+                                    <td>
+                                        <span style="text-align: right;font-weight:700;font-size : 20px;">{{orderPrice}}
+                                            VND</span>
+                                    </td>
+
+
+                                </tr>
+
+                            </table>
+                        </td>
+
+
+
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div style="text-align: left;">
+                                <div style="font-size: 20px;margin : 20px 0">Thông tin khách hàng
+                                </div>
+
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="text-align: left; font-size: 14px;">Tên người nhận </div>
+                        </td>
+                        <td style="width: 200px;">
+                            <div style="text-align: right; font-size: 13px;color : #aaaaaa">{{orderName}}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="text-align: left; font-size: 14px;">Số điện thoại </div>
+                        </td>
+                        <td style="width: 200px;">
+                            <div style="text-align: right; font-size: 13px;color : #aaaaaa">{{orderPhoneNumber}}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="text-align: left; font-size: 14px;">Địa chỉ</div>
+                        </td>
+                        <td style="width: 200px;">
+                            <div style="text-align: right; font-size: 13px;color : #aaaaaa">{{orderAddress}}
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
